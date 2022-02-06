@@ -22,7 +22,8 @@ btc_df = get_eur_monthly_avg_prices_as_dataframe('bitcoin')
 btc_df.to_csv('bitcoin_monthly_averages.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
 
 
-
 erg_df = get_eur_monthly_avg_prices_as_dataframe('ergo')
 erg_df.to_csv('ergo_monthly_averages.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
 
+erg_df = get_eur_monthly_avg_prices_as_dataframe('avian-network')
+erg_df.to_csv('avian_monthly_averages.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)

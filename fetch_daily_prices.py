@@ -17,3 +17,5 @@ btc_df.to_csv('bitcoin_market_chart.csv', index=False, header=True, quoting=csv.
 erg_df = get_eur_prices_as_dataframe('ergo')
 erg_df.to_csv('ergo_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
 
+erg_df = get_eur_prices_as_dataframe('avian-network')
+erg_df.to_csv('avian_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)

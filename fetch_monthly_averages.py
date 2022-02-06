@@ -27,3 +27,10 @@ erg_df.to_csv('ergo_monthly_averages.csv', index=False, header=True, quoting=csv
 
 erg_df = get_eur_monthly_avg_prices_as_dataframe('avian-network')
 erg_df.to_csv('avian_monthly_averages.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+
+# erg_df = get_eur_monthly_avg_prices_as_dataframe('neta')
+# erg_df.to_csv('neta_monthly_averages.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+
+
+# erg_df = get_eur_monthly_avg_prices_as_dataframe('cneta')
+# erg_df.to_csv('cneta_monthly_averages.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)

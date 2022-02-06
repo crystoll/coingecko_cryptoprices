@@ -19,3 +19,10 @@ erg_df.to_csv('ergo_market_chart.csv', index=False, header=True, quoting=csv.QUO
 
 erg_df = get_eur_prices_as_dataframe('avian-network')
 erg_df.to_csv('avian_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+
+# erg_df = get_eur_prices_as_dataframe('neta')
+# erg_df.to_csv('neta_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+
+# erg_df = get_eur_prices_as_dataframe('cneta')
+# erg_df.to_csv('cneta_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+

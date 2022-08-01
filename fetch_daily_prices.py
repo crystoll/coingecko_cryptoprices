@@ -5,20 +5,27 @@ from pycoingecko import CoinGeckoAPI
 cg = CoinGeckoAPI()
 id = 'bitcoin'
 
-def get_eur_prices_as_dataframe(id='bitcoin',days=365):
-    market_chart = cg.get_coin_market_chart_by_id(id=id, vs_currency='eur', interval='daily', days=days)
+
+def get_eur_prices_as_dataframe(id='bitcoin', days=365):
+    market_chart = cg.get_coin_market_chart_by_id(
+        id=id, vs_currency='eur', interval='daily', days=days)
     df = pd.DataFrame(market_chart['prices'][:-1], columns=['date', 'price'])
-    df['date']=(pd.to_datetime(df['date'],unit='ms')).dt.strftime('%d.%m.%Y')
+    df['date'] = (pd.to_datetime(df['date'], unit='ms')
+                  ).dt.strftime('%d.%m.%Y')
     return df
 
+
 btc_df = get_eur_prices_as_dataframe('bitcoin')
-btc_df.to_csv('bitcoin_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+btc_df.to_csv('bitcoin_market_chart.csv', index=False,
+              header=True, quoting=csv.QUOTE_NONNUMERIC)
 
 erg_df = get_eur_prices_as_dataframe('ergo')
-erg_df.to_csv('ergo_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+erg_df.to_csv('ergo_market_chart.csv', index=False,
+              header=True, quoting=csv.QUOTE_NONNUMERIC)
 
 erg_df = get_eur_prices_as_dataframe('avian-network')
-erg_df.to_csv('avian_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+erg_df.to_csv('avian_market_chart.csv', index=False,
+              header=True, quoting=csv.QUOTE_NONNUMERIC)
 
 # erg_df = get_eur_prices_as_dataframe('neta')
 # erg_df.to_csv('neta_market_chart.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
